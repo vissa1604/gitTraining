@@ -152,6 +152,6 @@ int main()
     
     cout<<"Quick Sort"<<endl;
     quickSort(arr,0,size-1);
-    displayArray(arr,size);//by Madhukar Vissapragada
+    displayArray(arr,size);//by vissapragada
     return 0;
 }
