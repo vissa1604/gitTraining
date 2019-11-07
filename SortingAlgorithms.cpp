@@ -147,8 +147,8 @@ int main()
     // cout<<"Insertion Sort"<<endl;
     // insertionSort(arr,size);
     
-    // cout<<"Merge Sort"<<endl;
-    // mergeSort(arr,0,size-1);
+    cout<<"Merge Sort"<<endl;
+    mergeSort(arr,0,size-1);
     
     cout<<"Quick Sort"<<endl;
     quickSort(arr,0,size-1);
