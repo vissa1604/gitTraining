@@ -144,8 +144,8 @@ int main()
     // cout<<"Bubble Sort"<<endl;
     // bubbleSort(arr,size);
     
-	 cout<<"Insertion Sort"<<endl;
-     insertionSort(arr,size);
+    // cout<<"Insertion Sort"<<endl;
+    // insertionSort(arr,size);
     
     cout<<"Merge Sort"<<endl;
     mergeSort(arr,0,size-1);
