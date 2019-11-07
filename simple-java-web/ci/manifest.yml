@@ -1,0 +1,12 @@
+---
+applications:
+- name: simple-java-web
+  memory: 512M
+  instances: 1
+  routes:
+  - route: simple-java-web.springernature.app
+  env:
+    ENVIRONMENT: dev./
+    SERVICE_NAME: "simple-java-web"
+    JAVA_OPTS: "-Dspring.profiles.active=dev"
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }}'

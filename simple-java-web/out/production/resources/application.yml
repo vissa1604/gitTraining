@@ -1,0 +1,19 @@
+server.port: 8080
+
+env: "${ENVIRONMENT:local}"
+
+spring:
+  profiles:
+    active: local
+  application:
+    name: "${SERVICE_NAME:simple-java-web}"
+
+management:
+  endpoints:
+    web:
+      base-path: "/internal"
+      exposure:
+        include: health,info,metrics
+
+logging:
+  config: "classpath:logback.xml"

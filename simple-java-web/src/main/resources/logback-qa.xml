@@ -1,0 +1,24 @@
+<included>
+
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>${LOGSINK_HOST_SPRCOM:-elk-logsink-503net.tools.pe.springer-sbm.com}:${LOGSINK_PORT_SPRCOM:-22369}</destination>
+
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <fieldNames>
+                <level>level_name</level>
+                <levelValue>level</levelValue>
+            </fieldNames>
+            <customFields>{"environment": "sprcom-services-qa","service": "${SERVICE_NAME:-simple-java-web}"}</customFields>
+
+            <includeMdc>true</includeMdc>
+        </encoder>
+    </appender>
+
+    <logger name="com.springernature.web" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="LOGSTASH" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</included>

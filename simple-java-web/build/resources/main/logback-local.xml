@@ -1,0 +1,7 @@
+<included>
+    <logger name="com.springernature.web" level="DEBUG"/>
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</included>

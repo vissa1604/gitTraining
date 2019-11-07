@@ -1,0 +1,7 @@
+env: "${ENVIRONMENT}"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
